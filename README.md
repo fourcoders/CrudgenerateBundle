@@ -1,7 +1,5 @@
-CrudgenerateBundle
-==================
-
-WE ARE IN ALPHA
+CrudgenerateBundle -- ALPHA VERSION
+===================================
 
 A custom crud with pagination, sort and filter for Symfony2
 

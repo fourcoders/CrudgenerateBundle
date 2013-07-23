@@ -1,0 +1,3 @@
+fourcoders_crudgenerate_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: FourcodersCrudgenerateBundle:Default:index }

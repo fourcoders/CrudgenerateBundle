@@ -1,0 +1,7 @@
+parameters:
+#    fourcoders_crudgenerate.example.class: Fourcoders\Bundle\CrudgenerateBundle\Example
+
+services:
+#    fourcoders_crudgenerate.example:
+#        class: %fourcoders_crudgenerate.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -3,6 +3,8 @@ CrudgenerateBundle -- ALPHA VERSION
 
 A custom crud with pagination, sort and filter for Symfony2
 
+IMPORTANT!!!!!!!!!!! Symofny >= 2.3.0
+
 Add in your composer.json
 
     {

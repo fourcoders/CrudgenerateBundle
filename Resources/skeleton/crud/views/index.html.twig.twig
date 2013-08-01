@@ -2,8 +2,6 @@
 {{ "{% extends '::base.html.twig' %}" }}
 {% endblock extends %}
 
-esta es una prueba para ver si furrufla<br>
-
 {% block body %}
 {{ "{% block body -%}" }}
     <h1>{{ entity }} list</h1>
@@ -11,6 +9,7 @@ esta es una prueba para ver si furrufla<br>
     <table class="records_list">
         <thead>
             <tr>
+                <td><input type="checkbox"></td>
             {%- for field, metadata in fields %}
 
                 <th>{{ field|capitalize }}</th>
@@ -52,6 +51,10 @@ esta es una prueba para ver si furrufla<br>
         {{ '{% endfor %}' }}
         </tbody>
     </table>
+
+    <div class="navigation">
+        {{ '{{knp_pagination_render(pagination)}}' }}
+    </div>
 
     {% if 'new' in actions %}
     <ul>

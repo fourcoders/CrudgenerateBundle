@@ -26,3 +26,5 @@ Add in your app/AppKernel.php
           // ...
           );
       }
+
+Use KnpPaginatorBundle for pagination. View https://github.com/KnpLabs/KnpPaginatorBundle for configure it.

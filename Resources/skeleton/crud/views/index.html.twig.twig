@@ -11,9 +11,7 @@
             <tr>
                 <td><input type="checkbox"></td>
             {%- for field, metadata in fields %}
-                
-                <th>{{ field|capitalize }}</th>
-
+                <th>{{ "{{ knp_pagination_sortable(pagination, '"~ field|capitalize ~"', 'a."~ field~"') }}" }} </th>
             {%- endfor %}
 
                 <th>Actions</th>
@@ -22,8 +20,9 @@
         <tbody>
         {{ '{% for entity in pagination %}' }}
             <tr>
-
+                <td><input type="checkbox"></td>  
         {%- for field, metadata in fields %}
+      
             {%- if loop.first and ('show' in actions) %}
 
                 <td><a href="{{ "{{ path('" ~ route_name_prefix ~ "_show', { 'id': entity.id }) }}" }}">{{ '{{ entity.' ~ field|replace({'_': ''}) ~ ' }}' }}</a></td>

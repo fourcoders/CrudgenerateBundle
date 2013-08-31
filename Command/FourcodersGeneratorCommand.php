@@ -4,6 +4,7 @@ namespace Fourcoders\Bundle\CrudgenerateBundle\Command;
 use Sensio\Bundle\GeneratorBundle\Generator\DoctrineCrudGenerator;
 use Sensio\Bundle\GeneratorBundle\Command\GenerateDoctrineCrudCommand;
 use Fourcoders\Bundle\CrudgenerateBundle\Generator\DoctrineCrudGeneratorCustom;
+use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
 
 class FourcodersGeneratorCommand extends GenerateDoctrineCrudCommand
@@ -20,7 +21,7 @@ class FourcodersGeneratorCommand extends GenerateDoctrineCrudCommand
 
     }
 
-    protected function getGenerator($bundle = null)
+    protected function getGenerator(BundleInterface $bundle = null)
     {
         $skeletonDirs[] = __DIR__.'/../Resources/skeleton';
         $skeletonDirs[] = __DIR__.'/../Resources';

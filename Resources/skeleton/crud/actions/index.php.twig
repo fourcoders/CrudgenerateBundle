@@ -29,16 +29,19 @@
             3/*limit per page*/
         );        
 
+        $form = $this->createFormBuilder()->getForm();
 {% endblock method_body %}
 
 {% block method_return %}
 {% if 'annotation' == format %}
         return array(
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'form' => $form->createView()
         );
 {% else %}
         return $this->render('{{ bundle }}:{{ entity|replace({'\\': '/'}) }}:index.html.twig', array(
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'form' => $form->createView()
         ));
 {% endif %}
 {% endblock method_return %}

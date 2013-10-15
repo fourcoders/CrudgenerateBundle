@@ -5,7 +5,8 @@
 {% block body %}
 {{ "{% block body -%}" }}
     <h1>{{ entity }} list</h1>
-
+    <form action="{{ "{{ path('" ~ route_name_prefix ~ "_multidelete') }}" }}" method="post" {{ "{{ form_enctype(form) }}" }}>
+    {{ form_rest(form) }}
     <table class="records_list">
         <thead>
             <tr>
@@ -20,7 +21,7 @@
         <tbody>
         {{ '{% for entity in pagination %}' }}
             <tr>
-                <td><input type="checkbox"></td>  
+                <td><input type="checkbox" name="delete[]" value="{{ "{{ entity.id }}" }}"></td>  
         {%- for field, metadata in fields %}
       
             {%- if loop.first and ('show' in actions) %}
@@ -64,5 +65,9 @@
         </li>
     </ul>
     {% endif %}
+    <input type="submit" value="Borrar">
+    <form>
+
+
 {{ "{% endblock %}" }}
 {% endblock body %}

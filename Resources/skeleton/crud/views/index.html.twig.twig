@@ -6,7 +6,7 @@
 {{ "{% block body -%}" }}
     <h1>{{ entity }} list</h1>
     <form action="{{ "{{ path('" ~ route_name_prefix ~ "_multidelete') }}" }}" method="post" {{ "{{ form_enctype(form) }}" }}>
-    {{ form_rest(form) }}
+    {{ "{{ form_rest(form) }}" }}
     <table class="records_list">
         <thead>
             <tr>
